@@ -1,0 +1,170 @@
+[
+    {
+        "id": 0,
+        "name": "Рисовашка",
+        "date": "29.12.2019",
+        "description": "«Рисовашка» - это холст для рисования, проект создан исключительно в развлекательном характере.",
+        "version": "0.7 Alpha",
+        "img": "./Projects/0/imgs/0.png",
+        "imgs": [
+
+        ],
+        "video": "",
+        "view": "https://lumbermaster.github.io/DrawMath/",
+
+        "urls": {
+            "github": "https://github.com/LumberMaster/DrawMath/tree/master/Imgs"
+        },
+
+        "languages": {
+            "HTML": true,
+            "CSS": true,
+            "JavaScript": true,
+            "Node.js": false,
+            "Python": false,
+            "C++": false,
+            "C#": false,
+            "unity": false,
+            "bot": false
+        },
+        "devices": {
+            "mobile": false,
+            "compucter": true
+        }
+    },
+    {
+        "id": 1,
+        "name": "Навигатор первокурснику",
+        "date": "29.06.2021",
+        "description": "Сайт создан для быстрой адаптации студентов в Череповецком Государственном Университете.",
+        "version": "0.1 Alpha",
+        "img": "",
+        "imgs":  [
+            
+        ],
+        "video": "",
+        "view": "",
+
+        "urls": {
+            "github": ""
+        },
+
+        "languages": {
+            "HTML": true,
+            "CSS": true,
+            "JavaScript": true,
+            "Node.js": true,
+            "Python": false,
+            "C++": false,
+            "C#": false,
+            "unity": false,
+            "bot": false
+        },
+        "devices": {
+            "mobile": false,
+            "compucter": true
+        }
+    }
+    ,
+    {
+        "id": 2,
+        "name": "Броуновское движение",
+        "date": "29.06.2021",
+        "description": "",
+        "version": "0.1 Alpha",
+        "img": "",
+        "imgs":  [
+            
+        ],
+        "video": "",
+        "view": "",
+
+        "urls": {
+            "github": ""
+        },
+
+        "languages": {
+            "HTML": false,
+            "CSS": false,
+            "JavaScript": false,
+            "Node.js": false,
+            "Python": false,
+            "C++": true,
+            "C#": false,
+            "unity": false,
+            "bot": false
+        },
+        "devices": {
+            "mobile": false,
+            "compucter": true
+        }
+    }
+    ,
+    {
+        "id": 3,
+        "name": "WALL-E. Бот для Discord.",
+        "date": "12.05.2020",
+        "description": "Данный бот был создан исключительно в развлекательных целях.  Основынми возможностями бота являются: очистка истории чата, прокачка виртуального профиля, казино.",
+        "version": "0.1 Alpha",
+        "img": "./Projects/3/imgs/0.png",
+        "imgs":  [
+            
+        ],
+        "video": "",
+        "view": "",
+
+        "urls": {
+            "github": "https://github.com/LumberMaster/WALL-E-BOT-on-discord.py"
+        },
+
+        "languages": {
+            "HTML": false,
+            "CSS": false,
+            "JavaScript": false,
+            "Node.js": false,
+            "Python": true,
+            "C++": false,
+            "C#": false,
+            "unity": false,
+            "bot": true
+        },
+        "devices": {
+            "mobile": false,
+            "compucter": true
+        }
+    }
+    ,
+    {
+        "id": 4,
+        "name": "JARVIS. Голосовой ассистент.",
+        "date": "16.10.2020",
+        "description": "",
+        "version": "0.1 Alpha",
+        "img": "./Projects/4/imgs/0.png",
+        "imgs":  [
+            
+        ],
+        "video": "",
+        "view": "",
+
+        "urls": {
+            "github": ""
+        },
+
+        "languages": {
+            "HTML": false,
+            "CSS": false,
+            "JavaScript": false,
+            "Node.js": false,
+            "Python": true,
+            "C++": false,
+            "C#": false,
+            "unity": false,
+            "bot": true
+        },
+        "devices": {
+            "mobile": false,
+            "compucter": true
+        }
+    }
+]

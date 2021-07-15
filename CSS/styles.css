@@ -25,6 +25,15 @@ hr {
     height: 32px;
     border-radius: 7px;
 }
+.icon-24 {
+    width: 24px;
+    height: 24px;
+    margin: 0px 3px;
+}
+.icon-16 {
+    width: 16px;
+    height: 16px;
+}
 .icon-64 {
     width: 48px;
     height: 48px;
@@ -91,13 +100,20 @@ hr {
     color:#f2b579;
     letter-spacing: 7px;
 }
+#footer > h2 {
+    font-size: 28px;
+    color:#f2b579;
+    letter-spacing: 7px;
+}
 
 #footer {
-    display: flex;
-    justify-content: center;
     padding: 30px;
 }
-#footer > a {
+#urls_mysocial {
+    display: flex;
+    justify-content: center;
+}
+#urls_mysocial > a {
     margin: 0 30px;
 }
 
@@ -155,4 +171,64 @@ hr {
 }
 #skills{
     width: 100%;
+}
+
+.Items_projects {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    min-height: 350px;
+    flex-wrap: wrap;
+    
+    background: #2d3541;
+    border-radius: 15px;
+    border: 1px solid #f2b579;
+}
+.Items_projects h3 {
+    width: 50%;
+    margin: 0;
+    font-size: 16px;
+}
+
+.Img_project_div {
+    width: 50%;
+    height: inherit;
+}
+.Previe_project_div {
+    width: 50%;
+}
+.Img_project_img {
+    width: 60%;
+    height: auto;
+    margin: 60px 40px;
+    border: 1px solid #f2b579;
+}
+.Previe_project_div > h2 {
+    color: #f2b579;
+    font-weight: 500;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.Previe_project_p_description {
+    min-height: 100px;
+    width: 93%;
+    text-align: justify;
+    text-indent: 8px;
+    color: #f2b579;
+}
+.Previe_project_urls {
+    min-height: 60px;
+    font-size: 17px;
+}
+.Previe_project_tags {
+    min-height: 70px;
+    font-size: 17px;
+}
+.urls_previe_icon {
+    width: 24px;
+    height: 24px;
+    margin: 0px 3px;
+}
+.urls_previe_icon:hover {
+    box-shadow:  4px 4px 4px rgba(0,0,0,0.5);
 }
