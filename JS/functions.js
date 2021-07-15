@@ -23,7 +23,7 @@ function Request(url, type="GET") {
 
 function Load_MyWork() {
 
-    let Arr = JSON.parse(Request('../JSON/Projects.json')),
+    let Arr = JSON.parse(Request('./JSON/Projects.json')),
         html = '';
     
     console.log(Arr);
