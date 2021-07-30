@@ -1,3 +1,5 @@
+
+
 function replace(htmlText, id) {
     document.getElementById(id).innerHTML = htmlText;
 }
@@ -54,7 +56,7 @@ function Load_MyWork() {
                 if(Arr[key]['view'] != "")  html += `<a href="${Arr[key]['view']}"><img src="./media/icons/eye.svg" class="urls_previe_icon"></a>`;
                 if(Arr[key]['urls']['github'] != "")  html += `<a href="${Arr[key]['urls']['github']}"><img src="./media/logos/github.svg" class="urls_previe_icon"></a>`;            html += "|</div>";
             // Добавление иконок тегов
-                html += "<div class='Previe_project_tags'>Теги:";
+                html += "<div class='Previe_project_tags'>ТЕГИ:";
                     if(Arr[key]['languages']['HTML'])  html += '<img src="./media/logos/html.svg" class="icon-24">';
                     if(Arr[key]['languages']['CSS']) html += '<img src="./media/logos/css.svg" class="icon-24">';
                     if(Arr[key]['languages']['JavaScript']) html += '<img src="./media/logos/javascript.svg" class="icon-24">';
