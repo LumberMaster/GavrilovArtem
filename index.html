@@ -10,13 +10,14 @@
     <script src="./JS/functions.js"></script>
 </head>
 
-<body onload="replace(Request('./templates/AboutMe/html.txt','GET'), 'content');">
+<body onload="replace(Request('./templates/AboutMe/html.html','GET'), 'content');">
     <div id="header">
         <!-- <div id="status">Статус: занят</div> -->
         <div id="wrapper">
             <div onclick="Load_MyWork();">Работы</div>
-            <div onclick="replace(Request('./templates/AboutMe/html.txt','GET'), 'content');">Обо мне</div>
-            <div onclick="replace(Request('./templates/Contacts/html.txt','GET'), 'content');">Контакты</div>
+            <div onclick="replace(Request('./templates/Blog/html.html','GET'), 'content');">Блог</div>
+            <div onclick="replace(Request('./templates/AboutMe/html.html','GET'), 'content');">Обо мне</div>
+            <div onclick="replace(Request('./templates/Contacts/html.html','GET'), 'content');">Контакты</div>
         </div>
         <script>
             replace(Request("./templates/AboutMe/html.txt","GET"), "content");
