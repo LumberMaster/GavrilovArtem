@@ -1,5 +1,331 @@
+@media (max-width: 299.5px) {
+    html { display: none;}
+ }
 
-@media (min-width: 576px) and (max-width: 991.5px) { 
+
+
+
+
+@media (min-width: 300px) and (max-width:  556.5px) {
+    body,html {
+        padding: 0;
+        margin: 0;
+    }
+    html {
+        overflow-y: scroll;
+    }
+    body {
+        background: #2f3946;
+        font-family: Tahoma, Geneva, sans-serif;
+    }
+
+    hr {
+        margin: 40px auto;
+        color: rgb(95, 95, 95);
+        width: 300px;
+        size: 1px;
+        border-radius: 10px;
+        
+    }
+
+    .icon-32 {
+        width: 32px;
+        height: 32px;
+        border-radius: 7px;
+    }
+    .icon-24 {
+        width: 24px;
+        height: 24px;
+        margin: 0px 3px;
+    }
+    .icon-16 {
+        width: 16px;
+        height: 16px;
+    }
+    .icon-64 {
+        width: 48px;
+        height: 48px;
+        border-radius: 13px;
+        /* box-shadow: 3px 2px 4px rgb(97, 97, 97); */
+    }
+    /* .icon-64:hover {
+
+        box-shadow: 3px 2px 4px #cc7b1e;
+    } */
+
+    #wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #header {
+        width: 100%;
+        background: #252d38;
+        color: #A79258;
+        padding: 15px 0;
+        margin-bottom: 40px;
+    }
+    #header > #wrapper {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+    }
+    #header > div > div {
+        border: 2px solid #A79258;
+        margin: 0 5px;
+        padding: 8px;
+        font-weight: 800;
+        font-size: 12px;
+    }
+    #header > div > div:hover {
+        color: #cc7b1e;
+        border: 2px solid #cc7b1e;
+    }
+    #header > div > div::after {
+        color: #f09023;
+        border: 2px solid #f09023;
+    }
+    #header > #status {
+        position: relative;
+        width: 120px;
+        z-index: 10;
+        float: left;
+    }
+    #lenta {
+        background: #7a7a7a;
+        width: 100%;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        height: 70px;
+        margin-bottom: 40px;
+    }
+    #content > div {
+        display: block;
+        /* justify-content: center; */
+    }
+    #content > h2 {
+        font-size: 28px;
+        color:#f2b579;
+        letter-spacing: 7px;
+    }
+    #content {
+        width: 100%;
+    }
+    #footer > h2 {
+        font-size: 28px;
+        color:#f2b579;
+        letter-spacing: 7px;
+    }
+
+    #footer {
+        padding: 30px;
+    }
+    #urls_mysocial {
+        display: flex;
+        justify-content: center;
+    }
+    #urls_mysocial > a {
+        margin: 0 30px;
+    }
+
+
+
+    #avatar__img {
+        width: 260px;
+        height: auto;
+        border: 4px solid rgb(63, 59, 77);
+    }
+
+    #avatar__div {
+        text-align: center;
+    }
+    #aboutme__div {
+        width: 100%;
+        font-size: 20px;
+    }
+    #aboutme__p {
+        text-shadow: 1px 2px 2px #000;
+        /* -webkit-text-stroke: 0.3px #d5c5b3; */
+        text-indent: 5%;
+        padding: 0 20px;
+        text-align: justify;
+        color:#e7e5e5;
+        margin: 4px 0;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 1.7;
+    }
+
+    .col3 {
+        float: left;
+        width: 33%;
+        text-align: center;
+    }
+    .imgItems__skills{
+        width: 60px;
+        height: 60px;
+    }
+    .textItems__skills{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 120px;
+        height: 60px;
+        font-size: 17px;
+        font-weight: 600;
+        color:#acacac;
+    }
+    .items__skills{
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+        height: 80px;
+    }
+    #skills{
+        display: flex;
+        width: 100%;
+    }
+
+    .Items_projects {
+        display: flex;
+        width: 100%;
+        margin: 20px auto;
+        min-height: 390px;
+        flex-wrap: wrap;
+        padding: 20px 30px;
+        background: #252d3886;
+        border-radius: 35px;
+        border: 1px solid #A79258;
+        /* box-shadow:  5px 4px 4px rgba(0,0,0,0.5); */
+    }
+    /* .Items_projects:hover {
+        box-shadow:  3px 2px 2px #A79258;
+    } */
+    .Items_projects h2 {
+        color: #A79258;
+        font-family: Comic Sans MS;
+        font-weight: 1200;
+        font-size: 27px;
+        letter-spacing: 1px;
+    }
+    .Items_projects h3 {
+        width: 50%;
+        margin: 0;
+        font-size: 16px;
+        color: #b69f5f;
+        margin-top: 10px;
+    }
+
+    .Img_project_div {
+        /* height: inherit; */
+        display: flex;
+        justify-content: center;
+    }
+    .Previe_project_div {
+        width: 100%;
+    }
+    .Img_project_img {
+        width: 60%;
+        height: auto;
+        margin: 60px 40px;
+        border: 1px solid #A79258;
+    }
+
+    .Previe_project_p_description {
+        min-height: 100px;
+        min-height: 100px;
+        width: 93%;
+        font-size: 18px;
+        text-align: justify;
+        text-indent: 8px;
+        color: #b69f5f;
+        letter-spacing: 1px;
+
+    }
+    .Previe_project_urls {
+        min-height: 60px;
+        font-size: 17px;
+        color: #b69f5f;
+    }
+    .Previe_project_tags {
+        min-height: 40px;
+        font-size: 20px;
+        color: #b69f5f;
+        letter-spacing: 1px;
+        font-family: Comic Sans MS;
+        font-weight: bold;
+    }
+    .urls_previe_icon {
+        width: 24px;
+        height: 24px;
+        margin: 0px 3px;
+        color: #b69f5f;
+    }
+    .urls_previe_icon:hover {
+
+        box-shadow:  4px 4px 4px rgba(0,0,0,0.5);
+    }
+
+    #urls_mysocial > a > img {
+        box-shadow:  4px 4px 4px rgba(0,0,0,0.3);
+    }
+    #urls_mysocial > a > img:hover {
+        box-shadow:  4px 4px 4px rgba(0,0,0,0.6);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 557px) and (max-width: 991.5px) { 
     body,html {
         padding: 0;
         margin: 0;
