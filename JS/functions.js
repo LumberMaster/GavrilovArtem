@@ -49,7 +49,7 @@ function Load_MyWork() {
     console.log(Arr);
     for(key in Arr){
         html += '<div class="Items_projects">';
-
+        html += `<h2 align="center" id="h2-project-name-top">${Arr[key]['name']}</h2>`;
         if(Arr[key]['img'] != "") {
             html += `
                 <div class="Img_project_div">
@@ -65,7 +65,7 @@ function Load_MyWork() {
         }
 
         html += '<div class="Previe_project_div">';
-            html += `<h2 align="center">${Arr[key]['name']}</h2>`;
+            html += `<h2 align="center" id="h2-project-name-bottom">${Arr[key]['name']}</h2>`;
             html += `<p class="Previe_project_p_description">${Arr[key]['description']}</p>`;
             
             
@@ -89,7 +89,7 @@ function Load_MyWork() {
                     if(Arr[key]['devices']['compucter']) html += '<img src="./media/icons/desktop.svg" class="icon-24">';
 
                 html += "</div>";
-            html += `<div style="display: flex;">`;
+            html += `<div class="Previe_project_DopInfo">`;
                 html += `<h3 align="left">Версия ${Arr[key]['version']}</h3>`;
                 html += `<h3 align="center">${Arr[key]['date']}</h3>`;
             html += `</div>`;
@@ -98,6 +98,69 @@ function Load_MyWork() {
 
         html += '</div>';
     }
-    replace(html,'content');
+    replace(html,'content__MyWorks');
     
+}
+
+
+var Pages = {"MyWorks":0,  "Blog":1, "AboutMe":2, "Contacts":3};
+var ActivePage = Pages.AboutMe;
+
+function ChangePage(Page) {
+    switch (Page) {
+        case 0:
+            document.getElementById("content").style.display = "none";
+            document.getElementById("content__MyWorks").style.display = "flex";
+
+            ActivePage = Pages.MyWorks;
+            Load_MyWork();
+            break;
+        case 1:
+            document.getElementById("content").style.display = "block";
+            document.getElementById("content__MyWorks").style.display = "none";
+
+            ActivePage = Pages.Blog;
+            replace(Request('./templates/Blog/html.html','GET'), 'content');
+            break;
+        case 2:
+            document.getElementById("content").style.display = "block";
+            document.getElementById("content__MyWorks").style.display = "none";
+
+            ActivePage = Pages.AboutMe;
+            replace(Request('./templates/AboutMe/html.html','GET'), 'content');
+            break;
+        case 3:
+            document.getElementById("content").style.display = "block";
+            document.getElementById("content__MyWorks").style.display = "none";
+
+            ActivePage = Pages.Contacts;
+            replace(Request('./templates/Contacts/html.html','GET'), 'content');
+            break;
+
+        default:
+            console.log("Данной странички не существует!");
+            break;
+    }
+
+    let buttons = document.getElementsByClassName("button_menu");
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.cssText = `.button_menu:hover {
+            color: #cc7b1e;
+            border: 2px solid #cc7b1e;
+        }
+        .button_menu::after {
+            color: #f09023;
+            border: 2px solid #f09023;
+        }`;
+
+        //buttons[i].style.color = "#a79258";
+        //buttons[i].style.borderColor = "#a79258";
+
+        //console.log(buttons[i].style.cssText);
+        //buttons[i].style.hover.color = "#cc7b1e";
+        //buttons[i].style.hover.borderColor = "#cc7b1e";
+    }
+
+    buttons[Page].style.color = "#f09023";
+    buttons[Page].style.borderColor = "#f09023";
 }

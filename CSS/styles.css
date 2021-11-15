@@ -72,18 +72,19 @@
         text-align: center;
         cursor: pointer;
     }
-    #header > div > div {
+   .button_menu {
         border: 2px solid #A79258;
         margin: 0 5px;
-        padding: 8px;
+        padding: 12px 9px;
         font-weight: 800;
-        font-size: 11px;
+        font-size: 10px;
+        white-space: nowrap;
     }
-    #header > div > div:hover {
+    .button_menu:hover {
         color: #cc7b1e;
         border: 2px solid #cc7b1e;
     }
-    #header > div > div::after {
+    .button_menu::after {
         color: #f09023;
         border: 2px solid #f09023;
     }
@@ -209,7 +210,7 @@
 
     .Items_projects {
         display: flex;
-        width: 100%;
+        width: 45%;
         margin: 20px auto;
         min-height: 390px;
         flex-wrap: wrap;
@@ -240,6 +241,7 @@
 
     .Img_project_div {
         /* height: inherit; */
+        width: 100%;
         display: flex;
         justify-content: center;
     }
@@ -254,6 +256,7 @@
     }
 
     .Previe_project_p_description {
+        display: none;
         min-height: 100px;
         min-height: 100px;
         width: 93%;
@@ -310,6 +313,34 @@
         font-size: 20px;
         color:#f2b579;
         letter-spacing: 7px;
+    }
+    #h2-project-name-top {
+        width: 100%;
+        display: block;
+    }
+    #h2-project-name-bottom {
+        display: none;
+    }
+    #content__MyWorks {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .Previe_project_DopInfo {
+        display: flex;
+        width: 100%;
+    }
+    .Previe_project_DopInfo h3 {
+        width: 50%;
+    }
+    #Avatar__Header {
+        margin-left: 20px;
+    }
+    #Avatar__Header img{
+        width: 34px;
+        height: 34px;
+        border-radius: 35px;
+        padding: 1px;
+        border: 2px solid #A79258;
     }
 }
 
@@ -426,14 +457,15 @@
         text-align: center;
         cursor: pointer;
     }
-    #header > div > div {
+    .button_menu {
         border: 2px solid #A79258;
         margin: 0 9px;
-        padding: 15px;
+        padding: 15px 15px;
         font-weight: 800;
         font-size: 20px;
+        white-space: nowrap;
     }
-    #header > div > div:hover {
+    .button_menu:hover {
         color: #cc7b1e;
         border: 2px solid #cc7b1e;
     }
@@ -555,15 +587,15 @@
 
     .Items_projects {
         display: flex;
-        width: 100%;
-        margin: 20px auto;
+        width: 33%;
+        margin: 6px 10px;
         min-height: 390px;
         flex-wrap: wrap;
         padding: 20px 30px;
         background: #252d3886;
         border-radius: 35px;
         border: 1px solid #A79258;
-        /* box-shadow:  5px 4px 4px rgba(0,0,0,0.5); */
+        box-shadow:  5px 4px 4px rgba(0,0,0,0.5);
     }
     /* .Items_projects:hover {
         box-shadow:  3px 2px 2px #A79258;
@@ -585,6 +617,7 @@
 
     .Img_project_div {
         /* height: inherit; */
+        width: 100%;
         display: flex;
         justify-content: center;
     }
@@ -599,6 +632,7 @@
     }
 
     .Previe_project_p_description {
+        display: none;
         min-height: 100px;
         min-height: 100px;
         width: 93%;
@@ -655,6 +689,34 @@
         font-size: 28px;
         color:#f2b579;
         letter-spacing: 7px;
+    }
+    #h2-project-name-top {
+        width: 100%;
+        display: block;
+    }
+    #h2-project-name-bottom {
+        display: none;
+    }
+    #content__MyWorks {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .Previe_project_DopInfo {
+        display: flex;
+        width: 100%;
+    }
+    .Previe_project_DopInfo h3 {
+        width: 50%;
+    }
+    #Avatar__Header {
+        margin-left: 20px;
+    }
+    #Avatar__Header img{
+        width: 50px;
+        height: 50px;
+        border-radius: 35px;
+        padding: 2px;
+        border: 2px solid #A79258;
     }
  }
 
@@ -798,7 +860,7 @@
     } */
 
     #wrapper {
-        width: 960px;
+        width: 1280px;
         margin: 0 auto;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
@@ -815,14 +877,15 @@
         text-align: center;
         cursor: pointer;
     }
-    #header > div > div {
+    .button_menu {
         border: 2px solid #A79258;
         margin: 0 9px;
         padding: 15px;
         font-weight: 800;
         font-size: 26px;
+        white-space: nowrap;
     }
-    #header > div > div:hover {
+    .button_menu:hover {
         color: #cc7b1e;
         border: 2px solid #cc7b1e;
     }
@@ -880,8 +943,9 @@
     }
 
     #avatar__div {
-        width: 35%;
+        width: 50%;
         text-align: center;
+        margin: 30px 0;
     }
     #aboutme__div {
         width: 65%;
@@ -938,26 +1002,26 @@
     }
 
     .Items_projects {
-        display: flex;
-        width: 80%;
-        margin: 20px auto;
+        width: 27%;
+        padding: 15px 22px;
+        margin: 20px 15px;
         min-height: 350px;
-        flex-wrap: wrap;
         
         background: #252d3886;
         border-radius: 35px;
         border: 1px solid #A79258;
         box-shadow:  5px 4px 4px rgba(0,0,0,0.5);
     }
-    /* .Items_projects:hover {
-        box-shadow:  3px 2px 2px #A79258;
-    } */
+    .Items_projects:hover {
+        box-shadow:  5px 4px 4px rgba(0, 0, 0, 0.734);
+    }
     .Items_projects h2 {
         color: #A79258;
         font-family: Comic Sans MS;
         font-weight: 1200;
-        font-size: 27px;
+        font-size: 25px;
         letter-spacing: 1px;
+        margin: 30px 0;
     }
     .Items_projects h3 {
         width: 50%;
@@ -966,22 +1030,28 @@
         color: #b69f5f;
         margin-top: 10px;
     }
-
+    /* #content {
+        display: flex;
+        flex-wrap: wrap;
+    } */
     .Img_project_div {
-        width: 35%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
         height: inherit;
     }
     .Previe_project_div {
-        width: 65%;
+        width: 100%;
     }
     .Img_project_img {
-        width: 60%;
+        width: 80%;
         height: auto;
-        margin: 60px 40px;
         border: 1px solid #A79258;
     }
 
     .Previe_project_p_description {
+        display: none;
         min-height: 100px;
         min-height: 100px;
         width: 93%;
@@ -1039,7 +1109,40 @@
         color:#f2b579;
         letter-spacing: 7px;
     }
+    #h2-project-name-top {
+        display: block;
+        width: 100%;
+    }
+    #h2-project-name-bottom {
+        display: none;
+    }
+    #content__MyWorks {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #content__MyWorks h2{
+       
+    }
+    .Previe_project_DopInfo {
+        display: flex;
+        width: 100%;
+    }
+    .Previe_project_DopInfo h3 {
+        width: 50%;
+    }
+    #Avatar__Header {
+        margin-left: 20px;
+    }
+    #Avatar__Header img{
+        width: 56px;
+        height: 56px;
+        border-radius: 35px;
+        padding: 2px;
+        border: 2px solid #A79258;
+    }
 }
+
+
 
 /* @media (min-width: 1200px) { 
 
