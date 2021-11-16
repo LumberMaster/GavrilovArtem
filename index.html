@@ -14,24 +14,26 @@
 
 <body onload="ChangePage(2)">
     <div id="header">
-        <!-- <div id="status">Статус: занят</div> -->
-        <div id="wrapper">
-            <div onclick="ChangePage(0);" class="button_menu">Работы</div>
-            <div onclick="ChangePage(1);" class="button_menu">Блог</div>
-            <div onclick="ChangePage(2);" class="button_menu">Обо мне</div>
-            <div onclick="ChangePage(3);" class="button_menu">Контакты</div>
-
-            <div id="Avatar__Header">
-                <img src="./media/avatar.png">
+        <div id="header__content">
+            <div id="wrapper">
+                <div onclick="ChangePage(0);" class="button_menu">Работы</div>
+                <div onclick="ChangePage(1);" class="button_menu">Блог</div>
+                <div onclick="ChangePage(2);" class="button_menu">Обо мне</div>
+                <div onclick="ChangePage(3);" class="button_menu">Контакты</div>
+    
+                <div id="Avatar__Header">
+                    <img src="./media/avatar_mini.png">
+                </div>
             </div>
         </div>
+        <!-- <div id="status">Статус: занят</div> -->
         <!-- <script>
             replace(Request("./templates/AboutMe/html.html","GET"), "content");
         </script> -->
     </div>
 
 
-    <div id="wrapper">
+    <div id="wrapper__content">
         <div id="content">
     
         </div>
