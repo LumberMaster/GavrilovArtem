@@ -49,11 +49,11 @@ function Load_MyWork() {
     console.log(Arr);
     for(key in Arr){
         html += '<div class="Items_projects">';
-        html += `<h2 align="center" id="h2-project-name-top">${Arr[key]['name']}</h2>`;
+        html += `<h2 align="center" id="h2-project-name-top">${Arr[key]['formate_name']}</h2>`;
         if(Arr[key]['img'] != "") {
             html += `
                 <div class="Img_project_div">
-                    <img src="${Arr[key]['img']}" class="Img_project_img"/>
+                    <img src="${Arr[key]['img']}" class="Img_project_img" />
                 </div>
             `;
         }else{
