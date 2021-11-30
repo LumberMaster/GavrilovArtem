@@ -1,6 +1,7 @@
 [
     {
         "id": 0,
+        "enabled": true,
         "name": "Рисовашка",
         "formate_name": "Рисовашка",
         "date": "29.12.2019",
@@ -35,6 +36,7 @@
     },
     {
         "id": 1,
+        "enabled": true,
         "name": "Навигатор первокурснику",
         "formate_name": "Навигатор<br> первокурснику",
         "date": "29.06.2021",
@@ -70,6 +72,7 @@
     ,
     {
         "id": 2,
+        "enabled": false,
         "name": "Броуновское движение",
         "formate_name": "Броуновское<br> движение",
         "date": "29.06.2021",
@@ -105,6 +108,7 @@
     ,
     {
         "id": 3,
+        "enabled": true,
         "name": "WALL-E. Бот для Discord.",
         "formate_name": "WALL-E.<br> Бот для Discord.",
         "date": "12.05.2020",
@@ -140,6 +144,7 @@
     ,
     {
         "id": 4,
+        "enabled": true,
         "name": "JARVIS. Голосовой ассистент.",
         "formate_name": "JARVIS.<br> Голосовой ассистент.",
         "date": "16.10.2020",
