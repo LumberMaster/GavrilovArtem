@@ -78,8 +78,7 @@
    .button_menu {
         border: 1px solid #A79258;
         margin: 0 3px;
-        height: 15px;
-        padding: 8px 7px;
+        padding: 6px 7px;
         font-weight: 800;
         font-size: 10px;
         white-space: nowrap;
@@ -613,7 +612,7 @@
 
     .Items_projects {
         display: flex;
-        width: 40%;
+        width: 45%;
         margin-top: 10px;
         margin-left: 20px;
         min-height: 390px;
@@ -1462,6 +1461,7 @@
     }
     #skills{
         width: 100%;
+        height: 100vh;
         position: relative;
         margin-top: 10vh;
         flex-wrap: wrap;

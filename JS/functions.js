@@ -131,7 +131,7 @@ function ChangePage(Page) {
             break;
         case 1:
             document.getElementById("wrapper__content").innerHTML = 
-                `<div id="content"  data-aos="fade-down">
+                `<div id="content"   data-aos="fade-up">
         
                 </div>
         
@@ -149,7 +149,7 @@ function ChangePage(Page) {
             break;
         case 2:
             document.getElementById("wrapper__content").innerHTML = 
-                `<div id="content"  data-aos="fade-down">
+                `<div id="content"  data-aos="fade-up">
         
                 </div>
         
@@ -167,7 +167,7 @@ function ChangePage(Page) {
             break;
         case 3:
             document.getElementById("wrapper__content").innerHTML = 
-                `<div id="content"  data-aos="fade-down">
+                `<div id="content"   data-aos="fade-up">
         
                 </div>
         
