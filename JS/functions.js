@@ -3,7 +3,9 @@ function InitAOS(){
         duration: 1200,
       });
 }
-  
+function ReplaceImage(TegImg, url){
+    TegImg.setAttribute("src", url);
+}  
 
 function replace(htmlText, id) {
     document.getElementById(id).innerHTML = htmlText;
@@ -59,13 +61,13 @@ function Load_MyWork() {
             if(Arr[key]['img'] != "") {
                 html += `
                     <div class="Img_project_div">
-                        <img src="${Arr[key]['img']}" class="Img_project_img" />
+                        <img onclick="ChangePage(0, ${key});" src="${Arr[key]['img']}" class="Img_project_img" />
                     </div>
                 `;
             }else{
                 html += `
                     <div class="Img_project_div">
-                        <img src="./media/icons/noimage.png" class="Img_project_img"/>
+                        <img onclick="ChangePage(0, ${key});" src="./media/icons/noimage.png" class="Img_project_img"/>
                     </div>
                 `;
             }
@@ -77,8 +79,8 @@ function Load_MyWork() {
                 
                 
                 html += "<div class='Previe_project_urls'>Ссылки |";
-                    if(Arr[key]['view'] != "")  html += `<a href="${Arr[key]['view']}"><img src="./media/icons/eye.svg" class="urls_previe_icon"></a>`;
-                    if(Arr[key]['urls']['github'] != "")  html += `<a href="${Arr[key]['urls']['github']}"><img src="./media/logos/github.svg" class="urls_previe_icon"></a>`;            html += "|</div>";
+                    if(Arr[key]['view'] != "")  html += `<a href="${Arr[key]['view']}"><img onmouseover="ReplaceImage(this, './media/icons/eye-active.svg');" onmouseout="ReplaceImage(this, './media/icons/eye.svg');" src="./media/icons/eye.svg" class="urls_previe_icon"></a>`;
+                    if(Arr[key]['urls']['github'] != "")  html += `<a href="${Arr[key]['urls']['github']}"><img onmouseover="ReplaceImage(this, './media/logos/github-active.svg');" onmouseout="ReplaceImage(this, './media/logos/github.svg');" src="./media/logos/github.svg" class="urls_previe_icon"></a>`;            html += "|</div>";
                 // Добавление иконок тегов
                     html += "<div class='Previe_project_tags'>ТЕГИ:";
                         if(Arr[key]['languages']['HTML'])  html += '<img src="./media/logos/html.svg" class="icon-24">';
@@ -118,17 +120,28 @@ var Pages = {
     };
 var ActivePage = Pages.AboutMe;
 
-function ChangePage(Page) {
+function ChangePage(Page, subpage=-1) {
     switch (Page) {
         case 0:
-            document.getElementById("content").style.display = "none";
-            document.getElementById("content__MyWorks").style.display = "flex";
+            if(subpage == -1){
+                document.getElementById("content").style.display = "none";
+                document.getElementById("content__MyWorks").style.display = "flex";
+    
+                ActivePage = Pages.MyWorks;
+                Load_MyWork();
+    
+                // AOS.refreshHard();
 
-            ActivePage = Pages.MyWorks;
-            Load_MyWork();
+            }else{
+                document.getElementById("content").style.display = "block";
+                document.getElementById("content__MyWorks").style.display = "none";
+                ActivePage = Pages.MyWorks;
 
-            // AOS.refreshHard();
+                replace(Request(`./Projects/${subpage}/Project.html`,'GET'), 'content');
+            }
             break;
+
+
         case 1:
             document.getElementById("wrapper__content").innerHTML = 
                 `<div id="content"   data-aos="fade-up">
@@ -147,6 +160,8 @@ function ChangePage(Page) {
 
             // AOS.refreshHard();
             break;
+
+
         case 2:
             document.getElementById("wrapper__content").innerHTML = 
                 `<div id="content"  data-aos="fade-up">
@@ -165,6 +180,9 @@ function ChangePage(Page) {
 
             // AOS.refreshHard();
             break;
+
+
+
         case 3:
             document.getElementById("wrapper__content").innerHTML = 
                 `<div id="content"   data-aos="fade-up">
@@ -183,7 +201,6 @@ function ChangePage(Page) {
 
             // AOS.refreshHard();
             break;
-
         default:
             console.log("Данной странички не существует!");
             break;

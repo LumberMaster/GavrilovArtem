@@ -254,6 +254,7 @@
         width: 100%;
     }
     .Img_project_img {
+        cursor: pointer;
         width: 90%;
         height: auto;
         margin: 0 40px;
@@ -485,7 +486,7 @@
     .button_menu {
         border: 2px solid #A79258;
         margin: 0 6px;
-        padding: 18px 15px;
+        padding: 12px 15px;
         font-weight: 800;
         font-size: 17px;
         white-space: nowrap;
@@ -656,6 +657,7 @@
         width: 100%;
     }
     .Img_project_img {
+        cursor: pointer;
         width: 60%;
         height: auto;
         margin: 20px 40px;
@@ -743,8 +745,8 @@
         margin-left: 20px;
     }
     #Avatar__Header img{
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
         border-radius: 35px;
         padding: 2px;
         border: 2px solid #A79258;
@@ -998,16 +1000,13 @@
     }
 
     #avatar__div {
-        width: 50%;
+        width: 25%;
         text-align: center;
-        margin: 30px 0;
+        margin: 0;
     }
     #aboutme__div {
-        width: 65%;
+        width: 50%;
         font-size: 20px;
-    }
-    #aboutme__div {
-        width: 65%;
     }
     #aboutme__p {
         text-shadow: 1px 2px 2px #000;
@@ -1100,6 +1099,7 @@
         width: 100%;
     }
     .Img_project_img {
+        cursor: pointer;
         width: 80%;
         height: auto;
         border: 1px solid #A79258;
@@ -1192,8 +1192,8 @@
         margin-left: 20px;
     }
     #Avatar__Header img{
-        width: 56px;
-        height: 56px;
+        width: 72px;
+        height: 72px;
         border-radius: 35px;
         padding: 2px;
         border: 3px solid #A79258; 
@@ -1408,16 +1408,13 @@
     }
 
     #avatar__div {
-        width: 50%;
+        width: 30%;
         text-align: center;
-        margin: 30px 0;
+        margin: 0;
     }
     #aboutme__div {
-        width: 65%;
+        width: 50%;
         font-size: 20px;
-    }
-    #aboutme__div {
-        width: 65%;
     }
     #aboutme__p {
         text-shadow: 1px 2px 2px #000;
@@ -1511,6 +1508,7 @@
         width: 100%;
     }
     .Img_project_img {
+        cursor: pointer;
         width: 80%;
         height: auto;
         border: 1px solid #A79258;
@@ -1604,8 +1602,8 @@
         margin-left: 20px;
     }
     #Avatar__Header img{
-        width: 56px;
-        height: 56px;
+        width: 72px;
+        height: 72px;
         border-radius: 35px;
         padding: 2px;
         border: 3px solid #A79258;
@@ -1635,8 +1633,21 @@
 
 
     /* Слайдер */
- 
-
+    
+    .slider-test{
+        width: 50%;
+        margin: 0 auto;
+        border: 3px solid #626262;
+    }
+    .slider-test h5 {
+        text-shadow: 1px 1px 2px black, 0 0 1em #A79258; /* Параметры тени */
+    }
+    .slider-test p {
+        text-shadow: 1px 1px 2px black, 0 0 1em #A79258; /* Параметры тени */
+    }
+    .slider-test .carousel-indicators button {
+       background-color: #fff;
+    }
 }
 
 /* @media (min-width: 1200px) { 
