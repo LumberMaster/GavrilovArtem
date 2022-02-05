@@ -73,7 +73,7 @@
         display: flex;
         justify-content: center;
         text-align: center;
-        cursor: pointer;
+        /* cursor: pointer; */
     }
    .button_menu {
         border: 1px solid #A79258;
@@ -82,6 +82,7 @@
         font-weight: 800;
         font-size: 10px;
         white-space: nowrap;
+        cursor: pointer;
     }
     .button_menu:hover {
         color: #cc7b1e;
@@ -481,7 +482,7 @@
         display: flex;
         justify-content: center;
         text-align: center;
-        cursor: pointer;
+        /* cursor: pointer; */
     }
     .button_menu {
         border: 2px solid #A79258;
@@ -490,6 +491,7 @@
         font-weight: 800;
         font-size: 17px;
         white-space: nowrap;
+        cursor: pointer;
     }
     .button_menu:hover {
         color: #cc7b1e;
@@ -930,7 +932,7 @@
         display: flex;
         justify-content: center;
         text-align: center;
-        cursor: pointer;
+        /* cursor: pointer; */
         
     }
     .button_menu {
@@ -940,6 +942,7 @@
         font-weight: 800;
         font-size: 26px;
         white-space: nowrap;
+        cursor: pointer;
     }
     .button_menu:hover {
         color: #cc7b1e;
@@ -1338,7 +1341,7 @@
         display: flex;
         justify-content: center;
         text-align: center;
-        cursor: pointer;
+        /* cursor: pointer; */
         
     }
     .button_menu {
@@ -1348,6 +1351,7 @@
         font-weight: 800;
         font-size: 26px;
         white-space: nowrap;
+        cursor: pointer;
     }
     .button_menu:hover {
         color: #cc7b1e;
@@ -1510,6 +1514,7 @@
     .Img_project_img {
         cursor: pointer;
         width: 80%;
+        min-height: 135px;
         height: auto;
         border: 1px solid #A79258;
     }
@@ -1647,6 +1652,19 @@
     }
     .slider-test .carousel-indicators button {
        background-color: #fff;
+    }
+
+    .CarouselCaption {
+        background: rgba(47, 45, 53, 0.879);
+        border: solid 1px #a79258ae;
+        border-radius: 30px;
+        margin-bottom: 0.5rem;
+        /* background: linear-gradient(0deg, rgba(61,61,61,1) 0%, rgba(255,255,255,1) 100%); */
+
+    }
+    .carousel-indicators {
+        
+        margin-bottom: 0.3rem;
     }
 }
 
