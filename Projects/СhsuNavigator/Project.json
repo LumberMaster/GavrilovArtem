@@ -1,0 +1,35 @@
+{
+    "id": 1,
+    "enabled": true,
+    "name": "Навигатор первокурснику",
+    "formate_name": "Навигатор<br> первокурснику",
+    "date": "29.06.2021",
+    "description": "Сайт создан для быстрой адаптации студентов в Череповецком Государственном Университете.",
+    "version": "0.1 Alpha",
+    "img": "",
+    "imgs":  [
+        
+    ],
+    "video": "",
+    "view": "",
+
+    "urls": {
+        "github": ""
+    },
+
+    "languages": {
+        "HTML": true,
+        "CSS": true,
+        "JavaScript": true,
+        "Node.js": true,
+        "Python": false,
+        "C++": false,
+        "C#": false,
+        "unity": false,
+        "bot": false
+    },
+    "devices": {
+        "mobile": false,
+        "compucter": true
+    }
+}

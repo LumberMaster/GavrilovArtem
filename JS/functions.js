@@ -1,3 +1,12 @@
+var Pages = {
+    "MyWorks":0,
+    "Blog":1,
+    "AboutMe":1,
+    "Contacts":2
+};
+var ActivePage = Pages.AboutMe;
+
+
 function InitAOS(){
     AOS.init({
         duration: 1200,
@@ -11,23 +20,12 @@ function replace(htmlText, id) {
     document.getElementById(id).innerHTML = htmlText;
 }
 function Request(url, type="GET") {
-    // 1. Создаём новый объект XMLHttpRequest
     var xhr = new XMLHttpRequest();
-
-    // 2. Конфигурируем его: GET-запрос на URL 'phones.json'
     xhr.open(type, url, false);
-
-    // 3. Отсылаем запрос
     xhr.send();
 
-    // 4. Если код ответа сервера не 200, то это ошибка
-    if (xhr.status != 200) {
-        // обработать ошибку
-        console.log( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
-    } else {
-        // вывести результат
-        return xhr.responseText; // responseText -- текст ответа.
-    }
+    if (xhr.status != 200) console.log( xhr.status + ': ' + xhr.statusText );
+    else return xhr.responseText;
 }
 function TestRequest(url, type="GET") {
     var xhr = new XMLHttpRequest();
@@ -37,20 +35,22 @@ function TestRequest(url, type="GET") {
     if (xhr.status != 200) console.log( xhr.status + ': ' + xhr.statusText ); 
     else return xhr.responseText; 
 }
-function Load_MyWork() {
+async function Load_MyWork() {
 
-    let Arr = JSON.parse(Request('./JSON/Projects.json')),
-        html = '';
+    let Arr = JSON.parse(Request('./Projects/Projects.json')),
+    html = '';
     
     console.log(Arr);
     for(key in Arr){
-        if(Arr[key]['enabled']){
+        let project = await JSON.parse(Request(`./Projects/${Arr[key]}/Project.json`));
+
+        if(project['enabled']){
             html += '<div class="Items_projects" data-aos="zoom-in">';
-            html += `<h2 align="center" id="h2-project-name-top">${Arr[key]['formate_name']}</h2>`;
-            if(Arr[key]['img'] != "") {
+            html += `<h2 align="center" id="h2-project-name-top">${project['formate_name']}</h2>`;
+            if(project['img'] != "") {
                 html += `
                     <div class="Img_project_div">
-                        <img onclick="ChangePage(0, ${key});" src="${Arr[key]['img']}" class="Img_project_img" />
+                        <img onclick="ChangePage(0, ${key});" src="./Projects/${Arr[key]}/${project['img']}" class="Img_project_img" />
                     </div>
                 `;
             }else{
@@ -62,33 +62,37 @@ function Load_MyWork() {
             }
 
             html += '<div class="Previe_project_div">';
-                html += `<h2 align="center" id="h2-project-name-bottom">${Arr[key]['name']}</h2>`;
-                html += `<p class="Previe_project_p_description">${Arr[key]['description']}</p>`;
+                html += `<h2 align="center" id="h2-project-name-bottom">${project['name']}</h2>`;
+                html += `<p class="Previe_project_p_description">${project['description']}</p>`;
                 
                 
                 
                 html += "<div class='Previe_project_urls'>Ссылки |";
-                    if(Arr[key]['view'] != "")  html += `<a href="${Arr[key]['view']}"><img onmouseover="ReplaceImage(this, './media/icons/eye-active.svg');" onmouseout="ReplaceImage(this, './media/icons/eye.svg');" src="./media/icons/eye.svg" class="urls_previe_icon"></a>`;
-                    if(Arr[key]['urls']['github'] != "")  html += `<a href="${Arr[key]['urls']['github']}"><img onmouseover="ReplaceImage(this, './media/logos/github-active.svg');" onmouseout="ReplaceImage(this, './media/logos/github.svg');" src="./media/logos/github.svg" class="urls_previe_icon"></a>`;            html += "|</div>";
-                // Добавление иконок тегов
-                    html += "<div class='Previe_project_tags'>ТЕГИ:";
-                        if(Arr[key]['languages']['HTML'])  html += '<img src="./media/logos/html.svg" class="icon-24">';
-                        if(Arr[key]['languages']['CSS']) html += '<img src="./media/logos/css.svg" class="icon-24">';
-                        if(Arr[key]['languages']['JavaScript']) html += '<img src="./media/logos/javascript.svg" class="icon-24">';
-                        if(Arr[key]['languages']['Node.js']) html += '<img src="./media/logos/nodejs.svg" class="icon-24">';
-                        if(Arr[key]['languages']['Python']) html += '<img src="./media/logos/python.svg" class="icon-24">';
-                        if(Arr[key]['languages']['C++']) html += '<img src="./media/logos/c++.svg" class="icon-24">';
-                        if(Arr[key]['languages']['C#']) html += '<img src="./media/logos/csh.svg" class="icon-24">';
-                        if(Arr[key]['languages']['unity']) html += '<img src="./media/logos/unity.svg" class="icon-24">';
-                        if(Arr[key]['languages']['bot']) html += '<img src="./media/icons/bot.svg" class="icon-24">';
 
-                        if(Arr[key]['devices']['mobile']) html += '<img src="./media/icons/mobile.svg" class="icon-24">';
-                        if(Arr[key]['devices']['compucter']) html += '<img src="./media/icons/desktop.svg" class="icon-24">';
+                if(project['view'] != "")  
+                    html += `<a href="${project['view']}"><img onmouseover="ReplaceImage(this, './media/icons/eye-active.svg');" onmouseout="ReplaceImage(this, './media/icons/eye.svg');" src="./media/icons/eye.svg" class="urls_previe_icon"></a>`;
+                if(project['urls']['github'] != "")  
+                    html += `<a href="${project['urls']['github']}"><img onmouseover="ReplaceImage(this, './media/logos/github-active.svg');" onmouseout="ReplaceImage(this, './media/logos/github.svg');" src="./media/logos/github.svg" class="urls_previe_icon"></a>`;            html += "|</div>";
+            
+                // Добавление иконок тегов
+                html += "<div class='Previe_project_tags'>ТЕГИ:";
+                    if(project['languages']['HTML'])  html += '<img src="./media/logos/html.svg" class="icon-24">';
+                    if(project['languages']['CSS']) html += '<img src="./media/logos/css.svg" class="icon-24">';
+                    if(project['languages']['JavaScript']) html += '<img src="./media/logos/javascript.svg" class="icon-24">';
+                    if(project['languages']['Node.js']) html += '<img src="./media/logos/nodejs.svg" class="icon-24">';
+                    if(project['languages']['Python']) html += '<img src="./media/logos/python.svg" class="icon-24">';
+                    if(project['languages']['C++']) html += '<img src="./media/logos/c++.svg" class="icon-24">';
+                    if(project['languages']['C#']) html += '<img src="./media/logos/csh.svg" class="icon-24">';
+                    if(project['languages']['unity']) html += '<img src="./media/logos/unity.svg" class="icon-24">';
+                    if(project['languages']['bot']) html += '<img src="./media/icons/bot.svg" class="icon-24">';
+
+                    if(project['devices']['mobile']) html += '<img src="./media/icons/mobile.svg" class="icon-24">';
+                    if(project['devices']['compucter']) html += '<img src="./media/icons/desktop.svg" class="icon-24">';
 
                     html += "</div>";
                 html += `<div class="Previe_project_DopInfo">`;
-                    html += `<h3 align="left">Версия ${Arr[key]['version']}</h3>`;
-                    html += `<h3 align="center">${Arr[key]['date']}</h3>`;
+                    html += `<h3 align="left">Версия ${project['version']}</h3>`;
+                    html += `<h3 align="center">${project['date']}</h3>`;
                 html += `</div>`;
 
                 html += '</div>';
@@ -101,13 +105,7 @@ function Load_MyWork() {
 }
 
 
-var Pages = {
-        "MyWorks":0,
-        "Blog":1,
-        "AboutMe":2,
-        "Contacts":3
-    };
-var ActivePage = Pages.AboutMe;
+
 
 function ChangePage(Page, subpage=-1) {
     switch (Page) {

@@ -1,0 +1,35 @@
+{
+    "id": 3,
+    "enabled": true,
+    "name": "WALL-E. Бот для Discord.",
+    "formate_name": "WALL-E.<br> Бот для Discord.",
+    "date": "12.05.2020",
+    "description": "Данный бот был создан исключительно в развлекательных целях.  Основынми возможностями бота являются: очистка истории чата, прокачка виртуального профиля, казино.",
+    "version": "0.1 Alpha",
+    "img": "./imgs/0.png",
+    "imgs":  [
+        
+    ],
+    "video": "",
+    "view": "",
+
+    "urls": {
+        "github": "https://github.com/LumberMaster/WALL-E-BOT-on-discord.py"
+    },
+
+    "languages": {
+        "HTML": false,
+        "CSS": false,
+        "JavaScript": false,
+        "Node.js": false,
+        "Python": true,
+        "C++": false,
+        "C#": false,
+        "unity": false,
+        "bot": true
+    },
+    "devices": {
+        "mobile": false,
+        "compucter": true
+    }
+}

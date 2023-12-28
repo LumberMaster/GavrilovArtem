@@ -1,0 +1,35 @@
+{
+    "id": 2,
+    "enabled": false,
+    "name": "Броуновское движение",
+    "formate_name": "Броуновское<br> движение",
+    "date": "29.06.2021",
+    "description": "",
+    "version": "0.1 Alpha",
+    "img": "",
+    "imgs":  [
+        
+    ],
+    "video": "",
+    "view": "",
+
+    "urls": {
+        "github": ""
+    },
+
+    "languages": {
+        "HTML": false,
+        "CSS": false,
+        "JavaScript": false,
+        "Node.js": false,
+        "Python": false,
+        "C++": true,
+        "C#": false,
+        "unity": false,
+        "bot": false
+    },
+    "devices": {
+        "mobile": false,
+        "compucter": true
+    }
+}

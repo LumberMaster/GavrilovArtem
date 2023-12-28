@@ -1,0 +1,35 @@
+{
+    "id": 0,
+    "enabled": true,
+    "name": "Рисовашка",
+    "formate_name": "Рисовашка",
+    "date": "29.12.2019",
+    "description": "«Рисовашка» - это холст для рисования, проект создан исключительно в развлекательном характере.",
+    "version": "0.7 Alpha",
+    "img": "./imgs/0.png",
+    "imgs": [
+
+    ],
+    "video": "",
+    "view": "https://lumbermaster.github.io/DrawMath/",
+
+    "urls": {
+        "github": "https://github.com/LumberMaster/DrawMath/tree/master/Imgs"
+    },
+
+    "languages": {
+        "HTML": true,
+        "CSS": true,
+        "JavaScript": true,
+        "Node.js": false,
+        "Python": false,
+        "C++": false,
+        "C#": false,
+        "unity": false,
+        "bot": false
+    },
+    "devices": {
+        "mobile": false,
+        "compucter": true
+    }
+}

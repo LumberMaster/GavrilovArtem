@@ -1,0 +1,35 @@
+{
+    "id": 4,
+    "enabled": true,
+    "name": "JARVIS. Голосовой ассистент.",
+    "formate_name": "JARVIS.<br> Голосовой ассистент.",
+    "date": "16.10.2020",
+    "description": "",
+    "version": "0.1 Alpha",
+    "img": "./imgs/0.png",
+    "imgs":  [
+        
+    ],
+    "video": "",
+    "view": "",
+
+    "urls": {
+        "github": ""
+    },
+
+    "languages": {
+        "HTML": false,
+        "CSS": false,
+        "JavaScript": false,
+        "Node.js": false,
+        "Python": true,
+        "C++": false,
+        "C#": false,
+        "unity": false,
+        "bot": true
+    },
+    "devices": {
+        "mobile": false,
+        "compucter": true
+    }
+}
